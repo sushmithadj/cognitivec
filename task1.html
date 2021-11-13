@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p {
+  color: gray;
+}
+
+.main{
+    position: relative;
+    
+}
+.tooltip{
+    position: absolute;
+    top: -30px;
+    left: 36%;
+   /* border: 1px solid red; */
+   padding: 4px 5px;
+   text-transform: capitalize;
+  opacity: 0;
+   
+}
+.link:hover.tooltip{
+    opacity: 1;
+
+}
+.main::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -30px;
+    left: 36%;
+    opacity: 0;
+    
+
+}
+.main:hover::after{
+    transform: all .3s ease;
+    opacity: 1;
+}
+
+
+    
+</style>
+<body>
+    <h1>Information on Whales</h1>
+
+   <div class="main" data-tooltip="click for more info">
+       <p>For more information on our conservation activities and which Whales we study,
+    see our <a target="_blank" href="whales.html" class="link">Whales page</a>.
+   
+    </p>
+   </div>
+       
+ 
+
+   
+    
+
+<p>If you want to ask our team more questions, feel free to <a href="mailto:whales@gmail.com?subject=Any queries related to whales will come here..">email us</a>.</p>
+    
+</body>
+</html>
